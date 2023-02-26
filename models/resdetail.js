@@ -11,6 +11,7 @@ const resdetailSchema = new Schema({
     phone:{type:String},
     maps:{type:String},
     facebook:{type:String},
+
 },{
     collection:"resdetails"
 });

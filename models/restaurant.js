@@ -8,10 +8,12 @@ const restaurantSchema = new Schema(
     time: { type: String },
     rating: { type: String },
     resid: { type: Number },
+    rec: { type: String },
+    cat: { type: String },
   },
   { collection: "restaurants" }
 );
 
-const restaurant = mongoose.model("restaurant",restaurantSchema);
+const restaurant = mongoose.model("restaurant", restaurantSchema);
 
 module.exports = restaurant;
