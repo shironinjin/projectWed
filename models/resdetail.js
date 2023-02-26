@@ -8,6 +8,7 @@ const resdetailSchema = new Schema({
     picture:{type:String},
     rating:{type:String},
     time:{type:String},
+    phone:{type:String},
     maps:{type:String},
     facebook:{type:String},
 },{

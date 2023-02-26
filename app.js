@@ -7,6 +7,7 @@ const config = require('./config/index')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var cors = require('cors')
 
 var resRouter = require('./routes/restaurant');
 
@@ -18,10 +19,14 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+app.use(cors())
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/restaurant',resRouter);
+
 
 module.exports = app;
